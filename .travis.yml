@@ -11,6 +11,9 @@ python:
  - "2.6"
 
 script:
+ # Regenerate installers
+  - if [[ $TRAVIS_PYTHON_VERSION == "3.6" ]]; then invoke generate; fi
+
  # Simple test runs
  - ./local-install.sh
  - ./curl-install.sh
