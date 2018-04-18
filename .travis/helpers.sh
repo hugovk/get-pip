@@ -15,6 +15,7 @@ function find_get_pip_version() {
 
 function cat_get_pip() {
   local version=$(find_get_pip_version "$1")
+  >&2 echo "version: $version"
 
   local path="get-pip.py"
   [[ -n "$version" ]] && path="$version/$path"
