@@ -25,7 +25,9 @@ jobs:
   include:
   - stage: Linters
     python: 3.6
+    env: []
     install:
     - pip install flake8
+    before_script: []
     script:
     - flake8 .
