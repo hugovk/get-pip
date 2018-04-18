@@ -20,8 +20,8 @@ function cat_get_pip() {
   [[ -n "$version" ]] && path="$version/$path"
   local src="$2"
   local cmd=cat
-  echo "version: $version"
-  echo "src: $src"
+  >&2 echo "version: $version"
+  >&2 echo "src: $src"
   if [[  "$src" == "remote" ]]
   then
     path="https://bootstrap.pypa.io/$path"
