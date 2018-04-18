@@ -15,6 +15,7 @@ before_script:
 - source .travis/helpers.sh
 
 script:
+- echo "$TRAVIS_PYTHON_VERSION"
 - find_get_pip_version "$TRAVIS_PYTHON_VERSION"
 - cat_get_pip "$TRAVIS_PYTHON_VERSION" "$SCRIPT_SRC" | python -
 
