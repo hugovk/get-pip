@@ -18,11 +18,11 @@ cache:
   pip: true
 
 install:
-- yes | pip uninstall setuptools pip
+- pip uninstall --yes setuptools pip
 
 script:
 - .travis/helpers.sh "$TRAVIS_PYTHON_VERSION" "$SCRIPT_SRC"
-- pip -V
+- pip --version
 
 jobs:
   fast_finish: true
